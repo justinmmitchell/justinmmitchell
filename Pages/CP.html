@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Justin Mitchell Portfolio</title>
+  <link rel="stylesheet" href="../Stylesheets/styles.css"/>
+</head>
+<body>
+  <header class="left50">
+    <nav class="navbar">
+      <a href="../index.html"><img class="logo" src="../Media/thick-logo.png" alt="JM Logo"/></a>
+      <button class="hamburger" id="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../Pages/Gallery.html">Gallery</a></li>
+        <li><a href="../Pages/GD.html">Game Dev</a></li>
+        <li><a href="../Pages/CP.html">Programming</a></li>
+        <li><a href="../Pages/Other.html">Other</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="flex">
+    <section id="about" class="section"> 
+      <div class="content fade-in animate">
+        <h2>Programming Projects</h2>
+        <p>Here are some projects I've made in Python, Rust, and other languages</p>
+      </div>
+    </section>
+
+    <section id="para-bg" class="section parallax"> 
+    </section>
+
+    <section id="proj1" class="section"> 
+      <div class="info fade-in animate">
+        <h2>Custom LSTM AI</h2>
+        <p>In Python, I made a custom LSTM AI from scratch for air quality prediction, then made one using the Pytorch library to compare the results for a science fair</p>
+        <img src="../Media/aqi-predictor.png" class="img-top" alt="Code Image"/>
+        <img src="../Media/aqi-data.png" class="img-bottom" alt="Code Image"/>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>©2025 Justin Mitchell. All rights reserved.</p>
+  </footer>
+
+  <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script>
+      gsap.registerPlugin(ScrollTrigger);
+  </script>
+  <script src="../Scripts/script.js"></script>
+
+</body>
+</html>

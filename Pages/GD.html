@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Game Development</title>
+  <link rel="stylesheet" href="../Stylesheets/styles.css"/>
+</head>
+<body>
+  <header class="left50">
+    <nav class="navbar">
+      <a href="../index.html"><img class="logo" src="../Media/thick-logo.png" alt="JM Logo"/></a>
+      <button class="hamburger" id="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../Pages/Gallery.html">Gallery</a></li>
+        <li><a href="../Pages/GD.html">Game Dev</a></li>
+        <li><a href="../Pages/CP.html">Programming</a></li>
+        <li><a href="../Pages/Other.html">Other</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="flex">
+
+    <section id="GD-home" class="section"> 
+      <!-- Background video -->
+      <video autoplay muted loop playsinline class="background-video">
+        <source src="../Media/gd-bg.mp4" type="video/mp4" />
+        <!-- Optional fallback text -->
+        Your browser does not support the video tag.
+      </video>
+
+      <!-- Optional gradient overlay -->
+      <div class="video-overlay"></div>
+
+      <div class="content fade-in animate">
+        <h2>Game Development Projects</h2>
+        <p>Here are some projects I've made in Unity using C#</p>
+      </div>
+    </section>
+
+    <section id="proj1" class="section"> 
+      <div class="info fade-in animate">
+        <h2>Basic 2d Sidescroller</h2>
+        <p>One of my first completed game projects, a basic 2d sidescroller with multiple levels</p>
+        <img src="../Media/2d-platformer.png" class="img-top" alt="Code Image"/>
+        <img src="../Media/2d-platformer-editor.png" class="img-bottom" alt="Code Image"/>
+      </div>
+    </section>
+   
+    <section id="proj2" class="section contrast-bg"> 
+      <div class="info fade-in animate">
+        <h2>2d Metroidvania</h2>
+        <p>A more complicated game, with bosses, fightable enemies, menus and a shop, and weapon upgrade paths</p>
+        <img src="../Media/knight-game.png" class="img-top" alt="Code Image"/>
+        <img src="../Media/knight-game-2.png" class="img-bottom" alt="Code Image"/>
+      </div>
+    </section>
+
+    <section id="proj3" class="section"> 
+      <div class="info fade-in animate">
+        <h2>3d Adventure Game</h2>
+        <p>My first 3d game, made with lots of shader work, including a reusable terrain shader component, and with a bossfight, collection system, and a fully animated 3d character</p>
+        <img src="../Media/openworld-game.png" class="img-top" alt="Code Image"/>
+        <img src="../Media/openworld-game-2.png" class="img-bottom" alt="Code Image"/>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>©2025 Justin Mitchell. All rights reserved.</p>
+  </footer>
+
+  <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script>
+      gsap.registerPlugin(ScrollTrigger);
+  </script>
+  <script src="../Scripts/script.js"></script>
+
+</body>
+</html>

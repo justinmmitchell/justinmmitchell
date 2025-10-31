@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Justin Mitchell Portfolio</title>
+  <link rel="icon" type="image/png" href="./Media/thick-logo.png"/>
+  <link rel="stylesheet" href="./Stylesheets/styles.css"/>
+</head>
+<body>
+  <header class="left50">
+    <nav class="navbar">
+      <!--<div class="logo"></div>-->
+      <a href="#home"><img class="logo" src="./Media/thick-logo.png" alt="JM Logo"/></a>
+      <button class="hamburger" id="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="./Pages/Gallery.html">Gallery</a></li>
+        <li><a href="./Pages/GD.html">Game Dev</a></li>
+        <li><a href="./Pages/CP.html">Programming</a></li>
+        <li><a href="./Pages/Other.html">Other</a></li>
+      </ul>
+    </nav>
+  </header>   
+
+  <main>
+    <section id="home" class="section">
+      <div class="hero"></div>
+      <div class="content fade-in animate">
+        <h1>Hello, I'm Justin</h1>
+        <p>Welcome to my portfolio website.</p>
+      </div>
+    </section>
+
+    <section id="about" class="section"> 
+      <div class="content fade-in animate">
+        <h2>About Me</h2>
+        <p>I am a hobby programmer and game developer, here is my work</p>
+      </div>
+    </section>
+
+    <section id="projects" class="timeline-wrapper">
+      <h2 class="high-z header-offset">Projects</h2>
+      <div class="line"></div>
+      <div class="timeline">
+        <div class="event">
+          <div class="dot fade-in animate"></div>
+          <p>2021</p>
+          <div class="info-box fade-in animate">
+            <img src="./Media/blender-donut.png" alt="Project 1 Screenshot" class="info-item bottom-left"/>
+            <img src="./Media/2d-platformer.png" alt="Project 1 Screenshot" class="info-item bottom-right"/>
+          </div>
+        </div>
+        
+        <div class="event">
+          <div class="dot fade-in animate"></div>
+          <p>2022</p>
+          <div class="info-box fade-in animate">
+            <img src="./Media/knight-game-3.png" alt="Project 1 Screenshot" class="info-item bottom-left"/>
+            <img src="./Media/knight-game-2.png" alt="Project 1 Screenshot" class="info-item bottom-right"/>
+          </div>
+        </div>
+
+        <div class="event">
+          <div class="dot fade-in animate"></div>
+          <p>2023</p>
+          <div class="info-box fade-in animate">
+            <img src="./Media/knight-game.png" alt="Project 1 Screenshot" class="info-item bottom-left"/>
+            <img src="./Media/blender-oilrefinery.png" alt="Project 1 Screenshot" class="info-item bottom-right"/>
+          </div>
+        </div>
+
+        <div class="event">
+          <div class="dot fade-in animate"></div>
+          <p>2024</p>
+          <div class="info-box fade-in animate">
+            <img src="./Media/aqi-predictor.png" alt="Project 1 Screenshot" class="info-item bottom-left"/>
+            <img src="./Media/aqi-data.png" alt="Project 1 Screenshot" class="info-item bottom-right"/>
+          </div>
+        </div>
+
+        <div class="event">
+          <div class="dot fade-in animate"></div>
+          <p>2025</p>
+          <div class="info-box fade-in animate">
+            <img src="./Media/openworld-game-2.png" alt="Project 1 Screenshot" class="info-item bottom-left"/>
+            <img src="./Media/fl-orchestral.png" alt="Project 1 Screenshot" class="info-item bottom-right"/>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="content fade-in animate">
+        <h2>Contact</h2>
+        <p>Reach out to me via email or social media.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>©2025 Justin Mitchell. All rights reserved.</p>
+  </footer>
+
+  <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script>
+      gsap.registerPlugin(ScrollTrigger);
+  </script>
+  <script src="./Scripts/script.js"></script>
+
+</body>
+</html>
+
