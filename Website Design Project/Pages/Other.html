@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Justin Mitchell Portfolio</title>
+  <link rel="stylesheet" href="../Stylesheets/styles.css"/>
+</head>
+<body>
+  <header class="left50">
+    <nav class="navbar">
+      <a href="../index.html"><img class="logo" src="../Media/thick-logo.png" alt="JM Logo"/></a>
+      <button class="hamburger" id="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../Pages/Gallery.html">Gallery</a></li>
+        <li><a href="../Pages/GD.html">Game Dev</a></li>
+        <li><a href="../Pages/CP.html">Programming</a></li>
+        <li><a href="../Pages/Other.html">Other</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="flex">
+    <section id="about" class="section"> 
+      <div class="content fade-in animate">
+        <h2>Other Projects</h2>
+        <p>Aside from game development and programming, I also compose music on FL Studio and make 3D models in Blender</p>
+      </div>
+    </section>
+
+    <section id="other-para" class="section parallax"> 
+    </section>
+    
+    <section id="proj1" class="section contrast-bg"> 
+      <div class="info fade-in animate">
+        <h2>Blender Projects</h2>
+        <p>In Blender I have utilized 3d modeling to create various assets and models for both my games and other projects, including the oil refinery pictured as part of an environmental campaigning project</p>
+        <img src="../Media/blender-donut.png" class="img-top" alt="Code Image"/>
+        <img src="../Media/blender-oilrefinery.png" class="img-bottom" alt="Code Image"/>
+      </div>
+    </section>
+
+    <section id="proj2" class="section"> 
+      <div class="info fade-in animate">
+        <h2>Music Projects</h2>
+        <p>I've experimented in creating many different genres of music in FL Studio, and working on composition, mixing, and my music theory. I have made songs for thematic and genre challenges, alongside having made some music to accompany my in progress game development project.</p>
+        <img src="../Media/fl-funky.png" class="img-top" alt="Code Image"/>
+        <img src="../Media/fl-orchestral.png" class="img-bottom" alt="Code Image"/>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>©2025 Justin Mitchell. All rights reserved.</p>
+  </footer>
+
+  <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script>
+      gsap.registerPlugin(ScrollTrigger);
+  </script>
+  <script src="../Scripts/script.js"></script>
+
+</body>
+</html>

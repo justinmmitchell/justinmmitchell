@@ -1,0 +1,550 @@
+/* BASE FORMATTING */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: auto; /* Let Lenis handle smoothness */
+}
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #1e1033;
+  color: #f0efe1;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* HEADER & NAV */
+header {
+  /*background-color: rgba(20, 22, 39, 0.95);*/
+  width: 55vw;
+  backdrop-filter: blur(20px);
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 40px;
+  padding: 1rem 2rem;
+  margin-top: 2vh;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+  transition: all 0.9s ease-in-out;
+}
+
+/* Navbar shrink state */
+header.shrink {
+  width: 30vw;
+  padding: 1rem 2rem;
+  transition: all 0.6s ease-in-out;
+}
+
+/* Force hamburger to appear and hide links in shrink mode */
+header.shrink .hamburger {
+  display: flex;
+}
+
+header.shrink .nav-links {
+  display: none;
+  transition: all 0.4s ease-in-out;
+}
+
+header.shrink .nav-links.active {
+  display: flex; /* allow dropdown to appear when hamburger is clicked */
+  flex-direction: row;
+  transition: all 0.4s ease-in-out;
+}
+
+.left50{
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  width: 4rem;
+  object-fit: fill;
+  transition: filter 0.4s ease-in-out;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 5px #245739)
+          drop-shadow(0 0 10px #1a3329)
+          drop-shadow(0 0 20px #1c3b2aa8)
+          brightness(1.2);
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.hamburger .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  border-radius: 3px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: #f0efe1;
+  text-decoration: none;
+  display: inline-block;
+  transition: color 0.2s ease, transform 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+  color: #a88de0;
+  transform: scale(1.1);
+  text-shadow: 0 0 2px #fff, /* White core */
+               0 0 4px #311b4e, /* Pink glow */
+               0 0 10px #3b1f68; /* Wider pink glow */
+}
+
+/* Sections */
+.flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+  padding-top: 8vh; /* To offset fixed header */
+}
+
+.grid {
+  width: 90%;
+  min-height: 65vh;
+  max-height: 250vh;
+  display: grid;
+  gap: 1rem 1rem; /* horizontal gap between columns only */
+}
+
+.grid-item {
+  object-fit: cover;
+  width: 100%;
+  aspect-ratio: 1 / 1; /* makes it a square */
+  height: auto;
+  transition: transform 0.5s ease-in-out;
+  z-index: 1;
+  border-radius: 15px;
+}
+
+.grid-item:hover {
+  transform: scale(1.05);
+  z-index: 10;
+}
+
+.grid-left {
+  grid-column: 1;
+}
+.grid-middle {
+  grid-column: 2;
+}
+.grid-right {
+  grid-column: 3;
+}
+
+.grid-1 {
+  grid-row: 1;
+}
+.grid-2 {
+  grid-row: 2;
+}
+.grid-3 {
+  grid-row: 3;
+}
+.grid-4 {
+  grid-row: 4;
+}
+
+
+.section{
+  min-height: 100vh;
+  padding: 5rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contrast-bg {
+  background-color: #2b1a42;
+}
+
+.parallax {
+  position: relative;
+  background-attachment: fixed;
+  overflow: hidden;
+  background-size: cover;
+  min-height: 80vh !important;
+}
+
+.hero {
+  width: 95%;
+  height: 92.5%;
+  background-image: radial-gradient(rgba(0, 0, 0, 0.4), transparent), url('../Media/hero_image.jpg');
+  position: absolute;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50px;
+}
+
+#para-bg {
+  background-image: url('../Media/parallax_bg.png');
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 50vh;
+  width: 95%;
+  border-radius: 40px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+#other-para {
+  background-image: url('../Media/other-bg.jpg');
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 50vh;
+  width: 95%;
+  border-radius: 40px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+#GD-home .background-video {
+  position: absolute;
+  width: 95%;
+  height: 92.5%;
+  object-fit: cover; /* same effect as background-size: cover */
+  border-radius: 50px;
+  z-index: 0;
+}
+
+#GD-home .video-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(rgba(0, 0, 0, 0.4), transparent);
+  backdrop-filter: blur(5px);
+  z-index: 1;
+  pointer-events: none;
+}
+
+
+#GD-home .content {
+  z-index: 2;
+}
+
+.content {
+  width: min(50vw, 600px);
+  max-width: 600px;
+  text-align: center;
+  /*padding: 2rem;*/
+  padding-block: 2rem; /* Equal top and bottom padding */
+  padding-inline: 2rem;
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(2.5px);
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Optional: Vertically center children if container grows */
+  gap: 0.75rem; /* Replace individual margins for consistency */
+}
+
+#gallery{
+  margin-top: 5vh;
+}
+
+.info {
+  position: relative;
+  width: 100vw; /* or whatever fits your layout */
+  height: 80vh; /* gives room for positioning */
+}
+
+/* Headline and paragraph on the left side */
+.info h2 {
+  position: absolute;
+  font-size: 2rem;
+  top: 37%;
+  left: 15%;
+  transform: translate(-25%, -40%);
+}
+
+.info p {
+  position: absolute;
+  font-size: 1.6rem;
+  top: 63%;
+  left: 15%;
+  transform: translate(-25%, -60%);
+  width: 30%;
+  overflow: wrap;
+}
+
+/* Stacked images on the right side */
+.info img {
+  position: absolute;
+  border-radius: 20px;
+  left: 85%; /* 25% right of center*/
+  top: 40%;
+  transform: translate(-75%, -50%);
+  object-fit: cover;  
+  object-position: center;
+  height: 45%;
+  width: 40%; /* adjust as needed */
+}
+
+/* Position the two images vertically with 10% gap */
+.info .img-top {
+  top: 25%; /* adjust as needed */
+}
+
+.info .img-bottom {
+  top: 75%; /* 10% gap around the center */
+}
+
+/* Auto-scaling text */
+.content h1,
+.content h2 {
+  font-size: clamp(1.5rem, 2vw, 2.25rem);
+  white-space: nowrap;
+  overflow: hidden;
+  /*margin-bottom: 0.5rem;*/
+  margin: 0;
+  line-height: 1.2;
+}
+
+.content p {
+  font-size: clamp(0.8rem, 1vw, 1.1rem);
+  overflow: visible;
+  margin: 0;
+  line-height: 1.2;
+}
+
+/*Timeline Styling*/
+
+.timeline-wrapper {
+  position: relative;
+  background-color: #2b1a42;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  padding: 2rem 0;
+  
+  display: flex;
+  flex-direction: column;    /* since you have an h2 on top */
+  justify-content: center;   /* vertical centering */
+}
+
+.timeline-wrapper h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+/* The container that will slide left/right */
+.timeline {
+  position: relative;
+  display: flex;
+  align-items: center;
+  /* We'll set width = number_of_events × 100% (flex basis) */
+  /* But let’s not force width here; we'll rely on child flex-basis */
+}
+
+/* The line spanning full viewport width */
+.timeline-wrapper .line {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100vw;
+  height: 4px;
+  background: #ccc;
+  transform: translateY(-50%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Each event takes full viewport width */
+.event {
+  flex: 0 0 100vw;  /* Each event occupies viewport width */
+  max-width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
+/* Dot and label */
+.event .dot {
+  width: 16px;
+  height: 16px;
+  background: #b7d7a8;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+.event p {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #f0efe1;
+}
+
+/* Related images info for each event */
+
+.info-box {
+  position: absolute;
+  width: 100rem;
+  height: 50rem;
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 40% 10% 50%; /* top, gap, bottom */
+  gap: 0 10rem; /* horizontal gap between columns only */
+}
+
+.info-box img {
+  border-radius: 2rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.info-item {
+  z-index: -9999;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.high-z {
+  z-index: 999;
+}
+
+.header-offset {
+  transform: translateY(-10vh); /* 'vh' is viewport height */
+  font-size: 5rem;
+}
+
+/* Positioning the items */
+.bottom-left {
+  grid-column: 1;
+  grid-row: 3; /* Bottom row */
+}
+
+.bottom-right {
+  grid-column: 2;
+  grid-row: 3;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2rem;
+  background-color: #11132d;
+  color: #999;
+  font-size: 0.9rem;
+}
+
+/* Fade-in animation for content */
+.fade-in.in-view {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease-out forwards;
+}
+@keyframes fadeInUp {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in:not(in-view) {
+  opacity: 0
+}
+
+/* Media queries */
+@media (max-width: 980px) {
+  .hamburger {
+    display: flex;
+  }
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: 2rem;
+    background-color: #11132d;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    display: none;
+  }
+  .nav-links.active {
+    display: flex;
+  }
+
+  /* On smaller screens: show fewer events at once */
+  .timeline {
+    gap: 4rem;
+  }
+  .event {
+    /* optionally scale or space differently */
+    min-width: 120px;
+  }
+  .hero {
+    background-position: calc(70%) center;
+  }
+
+  /* Headline and paragraph on the left side */
+  .info h2 {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  .info p {
+    position: absolute;
+    text-align: center;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+    overflow: wrap;
+    font-size: 20px;
+  }
+
+  /* Stacked images on the right side */
+  .info img {
+    position: absolute;
+    left: 50%; /* center */
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    object-fit: none;  
+    object-position: center;
+    height: 45%;
+    width: 80%; /* adjust as needed */
+  }
+
+  /* Position the two images vertically with 10% gap */
+  .info .img-top {
+    top: 15%; /* adjust as needed */
+  }
+
+  .info .img-bottom {
+    top: 85%; /* 10% gap around the center */
+  }
+}
